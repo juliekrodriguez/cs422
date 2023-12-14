@@ -5,7 +5,7 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class LoopingStatementCountCheck extends AbstractCheck {
-	private int loopingStatementCount;
+	public int loopingStatementCount;
 
 	@Override
 	public int[] getDefaultTokens() {

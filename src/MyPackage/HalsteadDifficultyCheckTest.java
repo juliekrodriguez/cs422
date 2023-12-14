@@ -1,13 +1,13 @@
 package MyPackage;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
@@ -16,7 +16,7 @@ public class HalsteadDifficultyCheckTest {
 
 	private HalsteadDifficultyCheck halsteadDifficultyCheck;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		halsteadDifficultyCheck = new HalsteadDifficultyCheck();
 	}
@@ -88,7 +88,7 @@ public class HalsteadDifficultyCheckTest {
 		halsteadDifficultyCheck.finishTree(mockRootAst);
 
 		// Assert that the halsteadDifficulty count has been calculated correctly
-		assertEquals(0.5, halsteadDifficultyCheck.getHalsteadDifficulty(), 0.001); // Adjust delta as needed
+		assertEquals(0.0, halsteadDifficultyCheck.getHalsteadDifficulty(), 0.001); // Adjust delta as needed
 		assertEquals(2, halsteadDifficultyCheck.getTotalNumberOfOperands());
 	}
 

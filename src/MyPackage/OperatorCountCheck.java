@@ -5,7 +5,7 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class OperatorCountCheck extends AbstractCheck {
-	private int operatorCount;
+	public int operatorCount;
 
 	@Override
 	public int[] getDefaultTokens() {

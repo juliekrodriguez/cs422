@@ -14,7 +14,7 @@ public class HalsteadVolumeCheck extends AbstractCheck {
 	private Set<Integer> uniqueOperators = new HashSet<>();
 	private Set<Integer> uniqueOperands = new HashSet<>();
 	private int programLength = 0;
-	private double halsteadVolume = 0.0;
+	public double halsteadVolume = 0.0;
 	private int vocabulary = 0;
 
 	@Override
@@ -87,8 +87,11 @@ public class HalsteadVolumeCheck extends AbstractCheck {
 	@Override
 	public void finishTree(DetailAST rootAST) {
 		vocabulary = uniqueOperators.size() + uniqueOperands.size();
-		halsteadVolume = programLength * Math.log(vocabulary) / Math.log(2);
-		// log(rootAST.getLineNo(), "Halstead Volume is: " + halsteadVolume);
+		if (vocabulary > 0) {
+			halsteadVolume = programLength * Math.log(vocabulary) / Math.log(2);
+		} else {
+			halsteadVolume = 0.0;
+		}
 	}
 
 	public double getHalsteadVolume() {

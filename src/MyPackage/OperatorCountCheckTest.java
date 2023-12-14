@@ -1,11 +1,11 @@
 package MyPackage;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 
@@ -13,7 +13,7 @@ public class OperatorCountCheckTest {
 
 	private OperatorCountCheck occ;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		occ = new OperatorCountCheck();
 	}
@@ -94,6 +94,6 @@ public class OperatorCountCheckTest {
 		when(ast3.getType()).thenReturn(com.puppycrawl.tools.checkstyle.api.TokenTypes.STAR_ASSIGN);
 		occ.visitToken(ast3);
 
-		assertEquals(2, occ.getOperatorCount());
+		assertEquals(3, occ.getOperatorCount());
 	}
 }

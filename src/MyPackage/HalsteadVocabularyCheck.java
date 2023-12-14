@@ -14,7 +14,7 @@ public class HalsteadVocabularyCheck extends AbstractCheck {
 
 	private Set<Integer> uniqueOperators = new HashSet<>();
 	private Set<Integer> uniqueOperands = new HashSet<>();
-	int halsteadVocabulary = 0;
+	public int halsteadVocabulary = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

@@ -16,7 +16,7 @@ public class HalsteadDifficultyCheck extends AbstractCheck {
 	private HashSet<Integer> uniqueOperators = new HashSet<>();
 	private HashSet<Integer> uniqueOperands = new HashSet<>();
 	private int totalNumberOfOperands = 0;
-	private double halsteadDifficulty = 0.0;
+	public double halsteadDifficulty = 0.0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

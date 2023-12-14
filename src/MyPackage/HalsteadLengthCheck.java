@@ -10,7 +10,7 @@ public class HalsteadLengthCheck extends AbstractCheck {
 
 	protected int totalOperators = 0;
 	protected int totalOperands = 0;
-	protected int hl = 0;
+	public int hl = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

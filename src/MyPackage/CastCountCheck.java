@@ -6,7 +6,7 @@ import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class CastCountCheck extends AbstractCheck {
 
-	private int castCount = 0;
+	public int castCount = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

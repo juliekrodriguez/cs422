@@ -5,7 +5,7 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class OperandCountCheck extends AbstractCheck {
-	private int ands = 0;
+	public int ands = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

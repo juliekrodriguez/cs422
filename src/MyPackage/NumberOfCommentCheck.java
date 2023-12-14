@@ -6,7 +6,7 @@ import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class NumberOfCommentCheck extends AbstractCheck {
 
-	protected int cc = 0;
+	public int cc = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {

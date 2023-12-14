@@ -6,7 +6,7 @@ import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
 public class VariableDeclarationCheck extends AbstractCheck {
 
-	int vc = 0;
+	public int vc = 0;
 
 	@Override
 	public void beginTree(DetailAST rootAST) {
